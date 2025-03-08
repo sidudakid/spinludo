@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpinLudo - Online Gaming Platform</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">SpinLudo</div>
+            <div class="user-info">
+                <span id="current-time"></span>
+                <span id="user-login">Welcome, sidudakid</span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to SpinLudo</h1>
+            <p>Play exciting games and win rewards!</p>
+        </section>
+
+        <section class="api-documentation">
+            <h2>API Documentation</h2>
+            <div class="endpoint">
+                <h3>Create Game</h3>
+                <p>POST /api/games</p>
+                <pre>
+{
+    "entry_fee": "10.00",
+    "owner_cut": "5.00"
+}
+                </pre>
+            </div>
+
+            <div class="endpoint">
+                <h3>Join Game</h3>
+                <p>POST /api/games/{id}/join</p>
+                <pre>
+{
+    "player2_id": 2
+}
+                </pre>
+            </div>
+
+            <div class="endpoint">
+                <h3>Start Game</h3>
+                <p>POST /api/games/{id}/start</p>
+            </div>
+
+            <div class="endpoint">
+                <h3>End Game</h3>
+                <p>POST /api/games/{id}/end</p>
+                <pre>
+{
+    "winner_id": 1
+}
+                </pre>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SpinLudo. All rights reserved.</p>
+    </footer>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
